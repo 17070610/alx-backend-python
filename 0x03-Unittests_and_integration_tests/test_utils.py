@@ -33,7 +33,6 @@ class TestGetJson(unittest.TestCase):
         ("http://example.com", {"payload": True}),
         ("http://holberton.io", {"payload": False}),
     ])
-    @patch('utils.requests.get')
     def test_get_json(self, test_url, test_payload):
         """Tests get_json's response"""
         attrs = {'json.return_value': test_payload}
